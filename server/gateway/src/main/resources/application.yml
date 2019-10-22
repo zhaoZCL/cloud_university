@@ -9,7 +9,7 @@ eureka:
     healthcheck:
       enabled: true # 开启健康检查（需要spring-boot-starter-actuator依赖）
     serviceUrl:
-      defaultZone: http://114.115.172.242:8761//eureka/
+      defaultZone: http://master:8761/eureka/,http://slave:8762/eureka/
   instance:
     preferIpAddress: true
     lease-expiration-duration-in-seconds: 30 # 续约更新时间间隔（默认30秒）
@@ -49,17 +49,17 @@ course-service:
     ServerListRefreshInterval: 15000
 spring:
      zipkin:
-       base-url: http://114.115.172.242:9411/
+       base-url: http://localhost:9411/
        enabled: true
      sleuth:
        sampler:
          percentage: 1
      session:
        store-type: jdbc
-     datasource:
-       url: jdbc:mysql://114.115.172.242:3306/gateway?characterEncoding=utf8
-       username: root
-       password: 123456
+#     datasource:\
+#       url: jdbc:mysql://localhost:3306/gateway?characterEncoding=utf8
+#       username: root
+#       password: 123456
 #####设置日志######
 logging:
    file: ..//logs//gateway.log

@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-oraclejdk8:slim
+FROM openjdk:8-jre
 VOLUME /tmp
 ADD system-service-0.1-SNAPSHOT.jar app.jar
 RUN sh -c 'touch /app.jar'

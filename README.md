@@ -8,6 +8,7 @@
 # 如何开始
 ## 源代码运行
 * 下载代码 ``git clone ``
+* 删除根目录pom.xml 中的模块 mvn install parent pom
 * 进入代码根目录执行 ``mvn clean package -Dskiptests`` 编译打包代码
 * 进入server/discovery/target 目录执行 ``java -jar discovery-0.1-SNAPSHOT.jar`` 启动eureka服务
 * 进入server/hystrix/target 目录执行 ``java -jar hystrix-0.1-SNAPSHOT.jar`` 启动hystrix 服务

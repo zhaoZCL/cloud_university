@@ -10,7 +10,7 @@ endpoints:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://114.115.172.242:8761//eureka/
+      defaultZone: http://master:8761/eureka/,http://slave:8762/eureka/
 #####设置日志######
 logging:
    file: ..//logs//hystrix.log

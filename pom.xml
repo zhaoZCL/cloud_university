@@ -27,6 +27,7 @@
         <module>system-service</module>
         <module>course-service</module>
         <module>server/discovery</module>
+        <module>server/discovery-slave</module>
         <module>server/config</module>
         <module>server/hystrix</module>
         <module>server/gateway</module>
